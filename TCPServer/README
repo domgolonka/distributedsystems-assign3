@@ -1,0 +1,15 @@
+Use the command to compile it for you:
+make
+
+To start the program, the arguments are:
+java TCPServer [IP] [ClientPort] [ServerPort] [directory of files] [primary.txt (absolute path)]
+
+To QUIT a server, please use this command (it will delete all files associated with the server):
+quit
+
+
+Primary.txt format:
+[Primary Server IP] [Primary Server Port] 
+
+Once the server runs, it will update the primary.txt to hold the directories of the primary server and backup server. They will interchange if the primary goes down. If you reboot the server again, and make it primary (shutting down the backup server):
+[Primary Server IP] [Primary Server Port] [primary directory] [backup directory]
